@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block section %}
+    <h2>
+            {{ object.marca }}
+            {% if object.color %}
+            &#9733;
+            {% else %}
+            &#9734;
+            {% endif %}
+            {% if object.cliente_id %}     
+                ( <a href="{% url" cliente-detail" object.cliente_id %)">{{
+                        object.cliente }}</a>  )
+            {% endif %}            
+    </h2>
+    
+
+    <a href="{% url "vehiculo-delete" object.id %}">delete</a>
+    <a href="{% url "vehiculo-update" object.id %}">edit</a>
+    <hr>
+{% endblock section %}
+{% block maincontent %}
+<div>
+    <div>
+        <img src="{% static object.foto.url %}"
+        style= "width:550px;height:420px" />
+
+    </div>
+</div>
+{% endblock maincontent %}

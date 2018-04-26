@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block section %}
+ 	<h2>Cliente</h2>
+ 	<hr>
+{% endblock section %}
+
+{% block maincontent %}
+	<div>
+ 		{% for c in object_list %}
+ 			<a href="{% url 'cliente-detail' c.identificacion %}">
+ 				{{ c.nombre }}
+ 			</a>
+ 		{% endfor %}
+ 	</div>
+{% endblock maincontent %} 
