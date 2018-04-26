@@ -1,6 +1,7 @@
 {% extends "base.html"%}
 {% block maincontent %}
 
+<h2>Vehiculo</h2>
 	<form enctype="multipart/form-data" method="post">{% csrf_token %} {{form.as_p}}
 		<button type="submit">Save</button>
 		<a class="btn" href="{% url 'vehiculo-list' %}">Cancel </a>

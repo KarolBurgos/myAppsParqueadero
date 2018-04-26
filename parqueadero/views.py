@@ -37,9 +37,10 @@ class VehiculoUpdate(UpdateView):
 	fields = '__all__'
 
 class VehiculoCreate(CreateView):
-	"""docstring for Pho"""
+	"""docstring for VehiculoCreate"""
 	model = Vehiculo
 	fields = '__all__'
+		
 
 class VehiculoDelete(DeleteView):
 	"""docstring for VehiculoDelete"""

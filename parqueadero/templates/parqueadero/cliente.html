@@ -1,16 +1,34 @@
+
+
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block section %}
- 	<h2>Cliente</h2>
- 	<hr>
+   <h2>Cliente</h2>
+   <hr>
 {% endblock section %}
 
 {% block maincontent %}
-	<div>
- 		{% for c in object_list %}
- 			<a href="{% url 'cliente-detail' c.identificacion %}">
- 				{{ c.nombre }}
- 			</a>
- 		{% endfor %}
- 	</div>
-{% endblock maincontent %} 
+   <div class="row well">
+       {% for p in object_list.all %}
+           <div class="col-md-4 well">
+               <div class="panel panel-primary">
+                   <div class="panel-body">
+                       <a href="{% url "cliente-detail" p.identificacion %}">
+                       <h3 class="panel-tittle">{{ p.nombre }}</h3>
+                       </a>
+                   </div>
+                   <div class="panel-footer">
+                       {% if p.telefono %}
+                           {{ p.telefono }}
+                       {% else %}
+                           <a href="{% url "cliente-update" p.identificacion %}">edit </a>
+                           <a href="{% url "cliente-delete" p.identificacion %}">del
+                       {% endif %}
+                   </div>
+               </div>
+           </div>
+       {% endfor %}
+   </div>
+{% endblock maincontent %}

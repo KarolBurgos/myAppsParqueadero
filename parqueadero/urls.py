@@ -23,6 +23,7 @@ urlpatterns = [
 	path('',views.first_view, name='first-view'),
 	url(r'^cliente/$', views.cliente, name='cliente-list'),
     url(r'^cliente/(?P<cliente_id>\d+)/detail/$', views.cliente_detail,	name='cliente-detail'),
+    
 	#url(r'^vehiculo/$', views.VehiculoListView.as_view(),name='vehiculo-list'),
     path('vehiculo/', views.VehiculoListView.as_view(), name='vehiculo-list'),
     # Detail
