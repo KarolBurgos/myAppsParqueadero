@@ -34,6 +34,7 @@ urlpatterns = [
     path('vehiculo/create/', views.VehiculoCreate.as_view(), name='vehiculo-create'),
     #Delete
     path('vehiculo/<int:pk>/delete/', views.VehiculoDelete.as_view(), name='vehiculo-delete'),
+    path('clien',views.VehiculoList.as_view(),name='vehiculo_listrest'),
     #url(r'^vehiculo/(?P<pk>\d+)/detail/$',views.VehiculoDetailView.as_view(),name='vehiculo-detail'),
     #url(r'^vehiculo/(?P<pk>\d+)/update/$', views.VehiculoUpdate.as_view(),name='vehiculo-update'),
     #url(r'^vehiculo/create/$', views.VehiculoCreate.as_view(), name='vehiculo-create'), 

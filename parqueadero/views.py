@@ -3,6 +3,8 @@ from django.http import HttpResponse
 from parqueadero.models import Cliente, Vehiculo
 from django.views.generic import ListView, DetailView
 from django.shortcuts import render
+from rest_framework.generics import ListCreateAPIView
+from parqueadero.serializers import VehiculoSerializers
 from django.urls import reverse_lazy
 from django.views.generic.edit import UpdateView, CreateView, DeleteView
 
@@ -46,3 +48,8 @@ class VehiculoDelete(DeleteView):
 	"""docstring for VehiculoDelete"""
 	model = Vehiculo
 	success_url = reverse_lazy('vehiculo-list')
+
+class VehiculoList(ListCreateAPIView):
+	queryset = Cliente.objects.all()
+	serializer_class = VehiculoSerializers
+		

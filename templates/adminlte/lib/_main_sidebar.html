@@ -26,17 +26,17 @@
             {% block nav_links %}
                 <li>
                     <a href="{% url "cliente-list" %}">
-                        <i class="fa fa-dashboard"></i> <span>Cliente</span>
+                        <i class="fa fa-user"></i> <span>Cliente</span>
                     </a>
                 </li>
                 <li>
                     <a href="{% url "vehiculo-list" %}">
-                        <i class="fa fa-vehiculo"></i> <span>Vehiculo</span>
+                        <i class="fa fa-taxi"></i> <span>Vehiculo</span>
                     </a>
                 </li>
                 <li class="treeview">
                     <a href="#">
-                        <i class="fa fa-group"></i> <span>Upload</span>
+                        <i class="fa fa-upload"></i> <span>Upload</span>
                         <span class="pull-right-container">
                             <i class="fa fa-angle-left pull-right"></i>
                         </span>
@@ -44,12 +44,12 @@
                     <ul class="treeview-menu">
                         <li>
                             <a href="{% url "vehiculo-create" %}">
-                                <i class="fa fa-user"></i> Cliente 
+                                <i class="fa fa-taxi"></i> Vehiculo 
                             </a>
                         </li>
                         <li>
                             <a href="{% url "vehiculo-create" %}">
-                                <i class="fa fa-user"></i> Vehiculo
+                                <i class="fa fa-user"></i> Cliente
                             </a>
                         </li>
                     </ul>
